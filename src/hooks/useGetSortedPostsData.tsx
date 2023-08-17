@@ -21,12 +21,17 @@ export default function getSortedPostsData() {
     // Combine the data with the id
     return {
       id,
-      ...(matterResult.data as { date: string; title: string }),
+      ...(matterResult.data as {
+        title: string;
+        description: string;
+        category: string;
+        createdAt: string;
+      }),
     };
   });
   // Sort posts by date
   return allPostsData.sort((a, b) => {
-    if (a.date < b.date) {
+    if (a.createdAt < b.createdAt) {
       return 1;
     }
     return -1;
