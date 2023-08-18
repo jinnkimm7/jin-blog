@@ -1,6 +1,6 @@
-import type { Config } from "tailwindcss";
+// import type { Config } from "tailwindcss";
 
-const config: Config = {
+const config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -16,6 +16,7 @@ const config: Config = {
     },
   },
   plugins: [
+    // eslint-disable-next-line func-names
     function ({ addUtilities }) {
       const newUtilities = {
         ".truncate-2-lines": {
@@ -25,6 +26,7 @@ const config: Config = {
           overflow: "hidden",
         },
       };
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
       addUtilities(newUtilities, ["responsive", "hover"]);
     },
   ],
