@@ -21,7 +21,8 @@
       }
     ],
     "paths": {
-      "contentlayer/generated": ["./.contentlayer/generated"],
+      "@/contentlayer/generated": ["./.contentlayer/generated"],
+      "@/contentlayer/generated/*": ["./.contentlayer/generated/*"],
       "@/*": ["./src/*"]
     }
   },
@@ -31,7 +32,7 @@
     "**/*.tsx", 
     ".next/types/**/*.ts", 
     "tailwind.config.js",
-    ".contentlayer/generated",
+    "./.contentlayer/generated",
 ],
   "exclude": ["node_modules"]
 }
