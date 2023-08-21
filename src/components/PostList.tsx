@@ -1,17 +1,20 @@
 import React from "react";
 import Link from "next/link";
-import getSortedPostsData from "../hooks/useGetSortedPostsData";
+import { allPosts } from "@/contentlayer/generated";
 
 function PostList() {
-  const allPostsData = getSortedPostsData();
-  // console.log(allPostsData);
+  const {
+    props: { posts },
+    // eslint-disable-next-line @typescript-eslint/no-use-before-define
+  } = getStaticProps();
+
   return (
     <main className="max-w-4xl mx-[auto] my-10">
-      <div className="mb-5">{allPostsData.length} posts</div>
+      <div className="mb-5">{posts.length} posts</div>
       <div className="grid grid-cols-2 gap-10">
-        {allPostsData.map(({ id, title, description, category, createdAt }) => (
+        {posts.map(({ _id, title, description, category, createdAt }) => (
           <article
-            key={id}
+            key={_id}
             className="flex flex-col bg-white rounded-lg p-8 h-[230px]"
           >
             <div className="flex justify-between items-center mb-2">
@@ -22,7 +25,7 @@ function PostList() {
             </div>
             <div className="flex-grow flex flex-col">
               <Link
-                href={`posts/${id}`}
+                href={`posts/${_id}`}
                 className="text-gray-900 text-xl font-bold mb-2 truncate-2-lines"
               >
                 {title}
@@ -35,5 +38,17 @@ function PostList() {
     </main>
   );
 }
+
+export const getStaticProps = () => {
+  const posts = allPosts.sort(
+    (a, b) => Number(new Date(b.createdAt)) - Number(new Date(a.createdAt)),
+  );
+
+  return {
+    props: {
+      posts,
+    },
+  };
+};
 
 export default PostList;
