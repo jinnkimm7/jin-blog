@@ -3,7 +3,7 @@ import React from "react";
 
 function Header() {
   return (
-    <header className="max-w-4xl mx-[auto]">
+    <header>
       <h1 className="text-2xl font-extrabold text-gray-900">
         Welcome to Jin&#39;s Blog 🤗
       </h1>

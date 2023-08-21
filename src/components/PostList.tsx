@@ -9,7 +9,7 @@ function PostList() {
   } = getStaticProps();
 
   return (
-    <main className="max-w-4xl mx-[auto] my-10">
+    <main>
       <div className="mb-5">{posts.length} posts</div>
       <div className="grid grid-cols-2 gap-10">
         {posts.map(({ _id, title, description, category, createdAt }) => (
