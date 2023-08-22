@@ -17,8 +17,8 @@ export type Post = {
   description?: string | undefined
   category: string
   createdAt: string
-  /** Markdown file body */
-  body: Markdown
+  /** MDX file body */
+  body: MDX
   url: string
 }  
 
