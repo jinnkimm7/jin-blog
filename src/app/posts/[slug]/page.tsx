@@ -29,11 +29,13 @@ function PostDetailPage({ params }: { params: { slug: string } }) {
 
   return (
     <Container>
-      <article className="prose lg:prose-xl">
+      <article className="prose lg:prose-xl bg-white p-5 mx-[auto]">
         <h1>{post.title}</h1>
         <div className="flex justify-between items-center">
           <p>{format(parseISO(post.createdAt), "LLLL d, yyyy")}</p>
-          <span>{post.category}</span>
+          <span className="bg-gray-100 px-2 rounded-xl text-blue-700">
+            {post.category}
+          </span>
         </div>
         <MDXContent />
       </article>
