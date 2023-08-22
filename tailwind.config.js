@@ -21,7 +21,6 @@ const config = {
       const newUtilities = {
         ".truncate-2-lines": {
           display: "-webkit-box",
-          "-webkit-line-clamp": "2",
           "-webkit-box-orient": "vertical",
           overflow: "hidden",
         },
@@ -29,6 +28,8 @@ const config = {
       // eslint-disable-next-line @typescript-eslint/no-unsafe-call
       addUtilities(newUtilities, ["responsive", "hover"]);
     },
+    // eslint-disable-next-line global-require
+    require("@tailwindcss/typography"),
   ],
 };
 export default config;
