@@ -5,6 +5,7 @@ import rehypePrettyCode from "rehype-pretty-code";
 var Post = defineDocumentType(() => ({
   name: "Post",
   filePathPattern: `**/*.md`,
+  contentType: "mdx",
   fields: {
     title: { type: "string", required: true },
     description: { type: "string", required: false },
@@ -41,4 +42,4 @@ export {
   Post,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-M2ARMMCR.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-MUKBC2FA.mjs.map
