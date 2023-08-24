@@ -19,9 +19,10 @@ const config = {
     // eslint-disable-next-line func-names
     function ({ addUtilities }) {
       const newUtilities = {
-        ".truncate-2-lines": {
+        ".line-clamp-2": {
           display: "-webkit-box",
           "-webkit-box-orient": "vertical",
+          "-webkit-line-clamp": "2",
           overflow: "hidden",
         },
       };
