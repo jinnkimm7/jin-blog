@@ -15,7 +15,7 @@ function PostList() {
         {posts.map(({ _id, title, description, category, createdAt }) => (
           <article
             key={_id}
-            className="flex flex-col bg-white rounded-lg p-8 h-[230px]"
+            className="flex flex-col bg-white rounded-lg p-8 h-[230px] hover:shadow-md hover:transform hover:-translate-y-1 transition-transform duration-300"
           >
             <div className="flex justify-between items-center mb-2">
               <span className="text-xs">{createdAt}</span>
@@ -23,15 +23,15 @@ function PostList() {
                 {category}
               </span>
             </div>
-            <div className="flex-grow flex flex-col">
-              <Link
-                href={`posts/${_id.replace(/\.md$/, "")}`}
-                className="text-gray-900 text-xl font-bold mb-2 truncate-2-lines"
-              >
+            <Link
+              href={`posts/${_id.replace(/\.md$/, "")}`}
+              className="flex-grow flex flex-col"
+            >
+              <h3 className="line-clamp-2 text-gray-900 text-xl font-bold mb-2 h-[55px]">
                 {title}
-              </Link>
-              <p className="truncate-2-lines mt-auto h-[55px]">{description}</p>
-            </div>
+              </h3>
+              <p className="line-clamp-2 mt-auto h-[54px]">{description}</p>
+            </Link>
           </article>
         ))}
       </div>
