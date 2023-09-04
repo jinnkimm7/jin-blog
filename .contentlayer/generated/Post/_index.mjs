@@ -2,5 +2,6 @@
 
 import dynamicProgrammingMd from './dynamic-programming.md.json' assert { type: 'json' }
 import prefixSumMd from './prefix-sum.md.json' assert { type: 'json' }
+import computerNetworkApplicationLayerMd from './computer-network-application-layer.md.json' assert { type: 'json' }
 
-export const allPosts = [dynamicProgrammingMd, prefixSumMd]
+export const allPosts = [dynamicProgrammingMd, prefixSumMd, computerNetworkApplicationLayerMd]
