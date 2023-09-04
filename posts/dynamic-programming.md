@@ -1,5 +1,5 @@
 ---
-title: '다이나믹 프로그래밍'
+title: '다이나믹 프로그래밍 | JavaScript'
 description: '다이나믹 프로그래밍 알고리즘을 공부하고 포스팅 했습니다.'
 createdAt: '2023-09-02'
 category: 'Algorithm'

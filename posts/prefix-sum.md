@@ -1,5 +1,5 @@
 ---
-title: '누적합 알고리즘'
+title: '누적합 알고리즘 | JavaScript'
 description: '누적합 알고리즘을 공부하고 포스팅 했습니다. 대표적인 백준 11441 합 구하기 문제를 풀이했습니다.'
 createdAt: '2023-08-22'
 category: 'Algorithm'

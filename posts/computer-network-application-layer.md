@@ -1,6 +1,6 @@
 ---
 title: '[컴퓨터네크워크] - Application Layer'
-description: 'KOCW의 컴퓨터네트워크(한양대학교 | 이석복) 강의 2강을 듣고 기록한 포스팅입니다.'
+description: 'KOCW의 컴퓨터네트워크(한양대학교 | 이석복) 강의를 듣고 기록한 포스팅입니다.'
 createdAt: '2023-09-03'
 category: 'Network'
 ---
