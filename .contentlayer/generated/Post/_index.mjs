@@ -4,5 +4,6 @@ import dynamicProgrammingMd from './dynamic-programming.md.json' assert { type: 
 import prefixSumMd from './prefix-sum.md.json' assert { type: 'json' }
 import computerNetworkApplicationLayerMd from './computer-network-application-layer.md.json' assert { type: 'json' }
 import algorithmDfsMd from './algorithm-dfs.md.json' assert { type: 'json' }
+import knouComputerArchitecture_1Md from './knou-computer-architecture-1.md.json' assert { type: 'json' }
 
-export const allPosts = [dynamicProgrammingMd, prefixSumMd, computerNetworkApplicationLayerMd, algorithmDfsMd]
+export const allPosts = [dynamicProgrammingMd, prefixSumMd, computerNetworkApplicationLayerMd, algorithmDfsMd, knouComputerArchitecture_1Md]
