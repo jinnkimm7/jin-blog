@@ -15,7 +15,7 @@ export type Post = {
   type: 'Post'
   title: string
   description?: string | undefined
-  category: string
+  tags?: string[] | undefined
   createdAt: string
   /** MDX file body */
   body: MDX

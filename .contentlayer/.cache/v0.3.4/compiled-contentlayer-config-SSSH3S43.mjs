@@ -1,8 +1,8 @@
+// contentlayer.config.ts
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
 import highlight from "rehype-highlight";
 import rehypePrettyCode from "rehype-pretty-code";
-
-export const Post = defineDocumentType(() => ({
+var Post = defineDocumentType(() => ({
   name: "Post",
   filePathPattern: `**/*.md`,
   contentType: "mdx",
@@ -10,18 +10,17 @@ export const Post = defineDocumentType(() => ({
     title: { type: "string", required: true },
     description: { type: "string", required: false },
     tags: { type: "list", of: { type: "string" } },
-    createdAt: { type: "string", required: true },
+    createdAt: { type: "string", required: true }
   },
   computedFields: {
     url: {
       type: "string",
       // eslint-disable-next-line no-underscore-dangle
-      resolve: post => `/posts/${post._raw.flattenedPath}`,
-    },
-  },
+      resolve: (post) => `/posts/${post._raw.flattenedPath}`
+    }
+  }
 }));
-
-const contentSource = makeSource({
+var contentSource = makeSource({
   // 마크다운 파일이 저장되어 있는 루트 폴더
   contentDirPath: "posts",
   documentTypes: [Post],
@@ -31,12 +30,16 @@ const contentSource = makeSource({
       [
         rehypePrettyCode,
         {
-          theme: "github-dark",
-        },
+          theme: "github-dark"
+        }
       ],
-      highlight,
-    ],
-  },
+      highlight
+    ]
+  }
 });
-
-export default contentSource;
+var contentlayer_config_default = contentSource;
+export {
+  Post,
+  contentlayer_config_default as default
+};
+//# sourceMappingURL=compiled-contentlayer-config-SSSH3S43.mjs.map
