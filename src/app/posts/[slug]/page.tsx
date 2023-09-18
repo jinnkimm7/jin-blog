@@ -33,9 +33,13 @@ function PostDetailPage({ params }: { params: { slug: string } }) {
         <h1>{post.title}</h1>
         <div className="flex justify-between items-center">
           <p>{format(parseISO(post.createdAt), "LLLL d, yyyy")}</p>
-          <span className="bg-gray-100 px-2 rounded-xl text-blue-700">
-            {post.category}
-          </span>
+          <div>
+            {post.tags?.map(tag => (
+              <span className="bg-gray-100 px-2 rounded-xl text-blue-700 ml-2">
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
         <MDXContent />
       </article>
