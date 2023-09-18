@@ -1,8 +1,10 @@
 ---
 title: 'BFS | JavaScript'
 description: 'BFS 알고리즘을 자바스크립트로 공부하고 정리한 포스팅입니다.'
+tags:
+  - Algorithm
+  - BFS
 createdAt: '2023-09-09'
-category: 'Algorithm'
 ---
 
 ![BFS 동작 순서](https://raw.githubusercontent.com/jinnkimm7/jin-blog/4ad220aca648010b0ba1512570b5c5359a5146ed/public/images/algorithm/bfs/1.gif)

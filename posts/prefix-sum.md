@@ -1,8 +1,10 @@
 ---
 title: '누적합 알고리즘 | JavaScript'
 description: '누적합 알고리즘을 공부하고 포스팅 했습니다. 대표적인 백준 11441 합 구하기 문제를 풀이했습니다.'
+tags:
+  - Algorithm
+  - 누적합
 createdAt: '2023-08-22'
-category: 'Algorithm'
 ---
 
 [합 구하기 - 실버 3](https://www.acmicpc.net/problem/11441)는 전형적인 누적합 알고리즘의 문제입니다.

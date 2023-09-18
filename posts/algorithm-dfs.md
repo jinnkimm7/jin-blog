@@ -1,8 +1,10 @@
 ---
 title: 'DFS | JavaScript'
 description: 'DFS 알고리즘을 자바스크립트로 공부하고 정리한 포스팅입니다.'
+tags:
+  - Algorithm
+  - DFS
 createdAt: '2023-09-05'
-category: 'Algorithm'
 ---
 
 ## DFS
