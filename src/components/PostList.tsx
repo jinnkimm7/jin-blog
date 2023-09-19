@@ -32,6 +32,7 @@ function PostList() {
                 {tags?.map(tag => (
                   <button
                     type="button"
+                    key={tag}
                     className="bg-gray-100 px-2 rounded-xl text-blue-700 ml-2"
                     onClick={() => setSelectedTag(tag)} // 버튼을 클릭하면 선택된 태그로 설정
                   >
