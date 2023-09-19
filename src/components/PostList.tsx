@@ -2,15 +2,22 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { compareDesc } from "date-fns";
-import { allPosts } from "@/contentlayer/generated";
 
-function PostList() {
-  const [selectedTag, setSelectedTag] = useState("");
+// Post 타입 정의
+interface Post {
+  _id: string;
+  title: string;
+  description: string;
+  tags?: string[];
+  createdAt: string;
+}
 
-  const posts = allPosts.sort((a, b) =>
-    compareDesc(new Date(a.createdAt), new Date(b.createdAt)),
-  );
+interface PostListProps {
+  posts: Post[];
+}
+
+function PostList({ posts }: PostListProps) {
+  const [selectedTag, setSelectedTag] = useState<string>("");
 
   // 선택된 태그에 해당하는 포스트만 필터링
   const filteredPosts = selectedTag
