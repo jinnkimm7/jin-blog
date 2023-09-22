@@ -5,7 +5,7 @@ import algorithmDfsMd from './algorithm-dfs.md.json' assert { type: 'json' }
 import bj_1697Md from './bj-1697.md.json' assert { type: 'json' }
 import computerNetworkApplicationLayerMd from './computer-network-application-layer.md.json' assert { type: 'json' }
 import dynamicProgrammingMd from './dynamic-programming.md.json' assert { type: 'json' }
-import knouComputerArchitecture_1Md from './knou-computer-architecture-1.md.json' assert { type: 'json' }
 import prefixSumMd from './prefix-sum.md.json' assert { type: 'json' }
+import sqlSelect_1Md from './sql-select-1.md.json' assert { type: 'json' }
 
-export const allPosts = [algorithmBfsMd, algorithmDfsMd, bj_1697Md, computerNetworkApplicationLayerMd, dynamicProgrammingMd, knouComputerArchitecture_1Md, prefixSumMd]
+export const allPosts = [algorithmBfsMd, algorithmDfsMd, bj_1697Md, computerNetworkApplicationLayerMd, dynamicProgrammingMd, prefixSumMd, sqlSelect_1Md]
