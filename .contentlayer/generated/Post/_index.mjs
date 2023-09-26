@@ -9,5 +9,6 @@ import prefixSumMd from './prefix-sum.md.json' assert { type: 'json' }
 import sqlSelect_1Md from './sql-select-1.md.json' assert { type: 'json' }
 import algorithmBacktrackingMd from './algorithm-backtracking.md.json' assert { type: 'json' }
 import sqlSelect_2Md from './sql-select-2.md.json' assert { type: 'json' }
+import sqlSelect_3Md from './sql-select-3.md.json' assert { type: 'json' }
 
-export const allPosts = [algorithmBfsMd, algorithmDfsMd, bj_1697Md, computerNetworkApplicationLayerMd, dynamicProgrammingMd, prefixSumMd, sqlSelect_1Md, algorithmBacktrackingMd, sqlSelect_2Md]
+export const allPosts = [algorithmBfsMd, algorithmDfsMd, bj_1697Md, computerNetworkApplicationLayerMd, dynamicProgrammingMd, prefixSumMd, sqlSelect_1Md, algorithmBacktrackingMd, sqlSelect_2Md, sqlSelect_3Md]
