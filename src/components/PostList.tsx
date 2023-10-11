@@ -17,15 +17,41 @@ interface PostListProps {
 }
 
 function PostList({ posts }: PostListProps) {
-  const [selectedTag, setSelectedTag] = useState<string>("");
+  const [selectedTag, setSelectedTag] = useState<string>("All");
 
   // 선택된 태그에 해당하는 포스트만 필터링
-  const filteredPosts = selectedTag
-    ? posts.filter(post => post.tags?.includes(selectedTag))
-    : posts;
+  const filteredPosts =
+    selectedTag === "All"
+      ? posts
+      : posts.filter(post => post.tags?.includes(selectedTag));
+
+  // 태그 배열
+  const allTags: string[] = posts
+    .flatMap(post => post.tags || [])
+    .filter((tag): tag is string => typeof tag === "string")
+    .sort();
+
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+  const uniqueTags: string[] = ["All", ...new Set<string>(allTags)];
 
   return (
-    <main>
+    <main className="relative">
+      <aside className="absolute left-[-230px] top-[-10px] bg-white h-[400px] w-[200px] overflow-y-auto rounded-lg p-3">
+        <h2 className="text-lg font-bold m-2">💻 Categories</h2>
+        <ul>
+          {uniqueTags.map(tag => (
+            <li key={tag}>
+              <button
+                type="button"
+                onClick={() => setSelectedTag(tag)}
+                // eslint-disable-next-line prettier/prettier
+                className={`bg-gray-100 w-[130px] h-[45px] rounded-lg px-3 text-lg font-semibold m-1 text-left ${selectedTag === tag ? "bg-gray-400" : ""}`}>
+                {tag}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </aside>
       <div className="my-5">{filteredPosts.length} posts</div>
       <div className="grid grid-cols-2 gap-10">
         {filteredPosts.map(({ _id, title, description, tags, createdAt }) => (
