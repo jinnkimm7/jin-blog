@@ -1,12 +1,11 @@
 import Image from "next/image";
 import React from "react";
+import Navbar from "../navbar/Navbar";
 
 function Header() {
   return (
-    <header>
-      <h1 className="text-2xl font-extrabold text-gray-900">
-        Welcome to Jin&#39;s Blog 🤗
-      </h1>
+    <header className="my-4">
+      <Navbar />
       <div className="flex border px-3 py-5 rounded-lg mt-3 bg-white">
         <Image
           src="/images/profile.svg"
