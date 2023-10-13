@@ -15,7 +15,7 @@ export default function Home() {
     .sort((a, b) => compareDesc(new Date(a.createdAt), new Date(b.createdAt)));
 
   return (
-    <Container maxSize={4}>
+    <Container>
       <Header />
       <PostList posts={posts} />
       <Footer />

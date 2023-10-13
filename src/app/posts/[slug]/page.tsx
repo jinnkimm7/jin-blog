@@ -5,7 +5,6 @@ import { format, parseISO } from "date-fns";
 import { allPosts } from "@/contentlayer/generated";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
-import Container from "@/components/Container";
 
 // eslint-disable-next-line @typescript-eslint/require-await
 export const generateStaticParams = async () =>
@@ -30,7 +29,7 @@ function PostDetailPage({ params }: { params: { slug: string } }) {
   const MDXContent = getMDXComponent(post.body.code);
 
   return (
-    <Container maxSize={3}>
+    <div className="max-w-3xl mx-auto">
       <Navbar />
       <article className="prose lg:prose-xl bg-white p-5 my-5 rounded-xl">
         <h1>{post.title}</h1>
@@ -46,9 +45,8 @@ function PostDetailPage({ params }: { params: { slug: string } }) {
         </div>
         <MDXContent />
       </article>
-
       <Footer />
-    </Container>
+    </div>
   );
 }
 
