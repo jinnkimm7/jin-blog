@@ -3,6 +3,7 @@ import Container from "@/components/Container";
 import PostList from "@/components/PostList";
 import Header from "@/components/header/Header";
 import { allPosts } from "@/contentlayer/generated";
+import Footer from "@/components/footer/Footer";
 
 export default function Home() {
   // allPosts를 Post[] 타입으로 변환
@@ -17,6 +18,7 @@ export default function Home() {
     <Container>
       <Header />
       <PostList posts={posts} />
+      <Footer />
     </Container>
   );
 }
