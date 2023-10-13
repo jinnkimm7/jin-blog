@@ -3,13 +3,13 @@ import React from "react";
 
 function Navbar() {
   return (
-    <nav>
+    <nav className="mx-[auto]">
       <Link href="/resume" className="text-lg font-bold animate-pulse">
         ➡️ About Me 🙋‍♂️
       </Link>
-      <h1 className="text-4xl font-extrabold text-gray-900">
-        Welcome to Jin&#39;s Blog 🤗
-      </h1>
+      <Link href="/" className="text-4xl font-extrabold text-gray-900">
+        <h1>Welcome to Jin&#39;s Blog 🤗</h1>
+      </Link>
     </nav>
   );
 }

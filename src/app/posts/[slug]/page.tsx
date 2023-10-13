@@ -3,6 +3,8 @@
 import { getMDXComponent } from "next-contentlayer/hooks";
 import { format, parseISO } from "date-fns";
 import { allPosts } from "@/contentlayer/generated";
+import Navbar from "@/components/navbar/Navbar";
+import Footer from "@/components/footer/Footer";
 import Container from "@/components/Container";
 
 // eslint-disable-next-line @typescript-eslint/require-await
@@ -28,14 +30,15 @@ function PostDetailPage({ params }: { params: { slug: string } }) {
   const MDXContent = getMDXComponent(post.body.code);
 
   return (
-    <Container>
-      <article className="prose lg:prose-xl bg-white p-5 mx-[auto]">
+    <Container maxSize={3}>
+      <Navbar />
+      <article className="prose lg:prose-xl bg-white p-5 my-5 rounded-xl">
         <h1>{post.title}</h1>
         <div className="flex justify-between items-center">
           <p>{format(parseISO(post.createdAt), "LLLL d, yyyy")}</p>
           <div>
             {post.tags?.map(tag => (
-              <span className="bg-gray-100 px-2 rounded-xl text-blue-700 ml-2">
+              <span className="bg-gray-100 px-2 rounded-xl text-blue-700 font-semibold ml-2">
                 {tag}
               </span>
             ))}
@@ -43,6 +46,8 @@ function PostDetailPage({ params }: { params: { slug: string } }) {
         </div>
         <MDXContent />
       </article>
+
+      <Footer />
     </Container>
   );
 }
