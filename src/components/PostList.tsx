@@ -43,7 +43,7 @@ function PostList({ posts }: PostListProps) {
               type="button"
               onClick={() => setSelectedTag(tag)}
               // eslint-disable-next-line prettier/prettier
-              className={`bg-gray-100 min-w-max min-h-max rounded-lg px-3 text-lg font-semibold m-1 text-left ${selectedTag === tag ? "bg-gray-400" : ""}`}>
+              className={`min-w-max min-h-max rounded-lg px-3 text-lg font-semibold m-1 text-left ${selectedTag === tag ? "bg-gray-400" : "bg-gray-100"}`}>
               {tag}
             </button>
           </li>
