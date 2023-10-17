@@ -2,6 +2,7 @@
 
 import algorithmBacktrackingMd from './algorithm-backtracking.md.json' assert { type: 'json' }
 import algorithmBfsMd from './algorithm-bfs.md.json' assert { type: 'json' }
+import algorithmBinarysearchMd from './algorithm-binarysearch.md.json' assert { type: 'json' }
 import algorithmDfsMd from './algorithm-dfs.md.json' assert { type: 'json' }
 import bj_1697Md from './bj-1697.md.json' assert { type: 'json' }
 import browserRenderingMd from './browser-rendering.md.json' assert { type: 'json' }
@@ -14,4 +15,4 @@ import sqlSelect_1Md from './sql-select-1.md.json' assert { type: 'json' }
 import sqlSelect_2Md from './sql-select-2.md.json' assert { type: 'json' }
 import sqlSelect_3Md from './sql-select-3.md.json' assert { type: 'json' }
 
-export const allPosts = [algorithmBacktrackingMd, algorithmBfsMd, algorithmDfsMd, bj_1697Md, browserRenderingMd, computerArchitecture_1Md, computerNetworkApplicationLayerMd, dynamicProgrammingMd, jsVarMd, prefixSumMd, sqlSelect_1Md, sqlSelect_2Md, sqlSelect_3Md]
+export const allPosts = [algorithmBacktrackingMd, algorithmBfsMd, algorithmBinarysearchMd, algorithmDfsMd, bj_1697Md, browserRenderingMd, computerArchitecture_1Md, computerNetworkApplicationLayerMd, dynamicProgrammingMd, jsVarMd, prefixSumMd, sqlSelect_1Md, sqlSelect_2Md, sqlSelect_3Md]
