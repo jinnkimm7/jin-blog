@@ -5,6 +5,7 @@ import { format, parseISO } from "date-fns";
 import { allPosts } from "@/contentlayer/generated";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
+import Comment from "@/components/comment/Comment";
 
 // eslint-disable-next-line @typescript-eslint/require-await
 export const generateStaticParams = async () =>
@@ -45,6 +46,7 @@ function PostDetailPage({ params }: { params: { slug: string } }) {
         </div>
         <MDXContent />
       </article>
+      <Comment />
       <Footer />
     </div>
   );
