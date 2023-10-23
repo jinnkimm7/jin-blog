@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Pagination from "./pagination/Pagination";
 
 // Post 타입 정의
 interface Post {
@@ -18,6 +19,7 @@ interface PostListProps {
 
 function PostList({ posts }: PostListProps) {
   const [selectedTag, setSelectedTag] = useState<string>("All");
+  const [currentPage, setCurrentPage] = useState(1);
 
   // 선택된 태그에 해당하는 포스트만 필터링
   const filteredPosts =
@@ -34,6 +36,11 @@ function PostList({ posts }: PostListProps) {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const uniqueTags: string[] = ["All", ...new Set<string>(allTags)];
 
+  const postsPerPage = 10;
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
+
   return (
     <>
       <ul className="sticky top-3 z-10 bg-white rounded-lg px-3 py-2 flex overflow-x-auto">
@@ -41,7 +48,10 @@ function PostList({ posts }: PostListProps) {
           <li key={tag}>
             <button
               type="button"
-              onClick={() => setSelectedTag(tag)}
+              onClick={() => {
+                setSelectedTag(tag);
+                setCurrentPage(1);
+              }}
               // eslint-disable-next-line prettier/prettier
               className={`min-w-max min-h-max rounded-lg px-3 text-lg font-semibold m-1 text-left ${selectedTag === tag ? "bg-gray-400" : "bg-gray-100"}`}>
               {tag}
@@ -52,7 +62,7 @@ function PostList({ posts }: PostListProps) {
       <main>
         <div className="my-5">{filteredPosts.length} posts</div>
         <div className="grid grid-cols-2 gap-10">
-          {filteredPosts.map(({ _id, title, description, tags, createdAt }) => (
+          {currentPosts.map(({ _id, title, description, tags, createdAt }) => (
             <article
               key={_id}
               className="flex flex-col bg-white rounded-lg p-8 h-[230px] hover:shadow-md hover:transform hover:-translate-y-1 transition-transform duration-300"
@@ -85,6 +95,12 @@ function PostList({ posts }: PostListProps) {
           ))}
         </div>
       </main>
+      <Pagination
+        postLength={filteredPosts.length}
+        postsPerPage={postsPerPage}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+      />
     </>
   );
 }
