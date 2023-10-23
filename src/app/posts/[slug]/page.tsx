@@ -1,11 +1,12 @@
 /* eslint-disable @typescript-eslint/no-shadow */
 /* eslint-disable no-underscore-dangle */
 import { getMDXComponent } from "next-contentlayer/hooks";
-import { format, parseISO } from "date-fns";
+import { format, parseISO, compareDesc } from "date-fns";
 import { allPosts } from "@/contentlayer/generated";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
 import Comment from "@/components/comment/Comment";
+import PageMover from "@/components/pageMover/PageMover";
 
 // eslint-disable-next-line @typescript-eslint/require-await
 export const generateStaticParams = async () =>
@@ -22,6 +23,26 @@ export const generateMetadata = ({ params }: { params: { slug: string } }) => {
 
 function PostDetailPage({ params }: { params: { slug: string } }) {
   const post = allPosts.find(post => post._raw.flattenedPath === params.slug);
+
+  const sortedPosts = allPosts.sort((a, b) =>
+    compareDesc(new Date(a.createdAt), new Date(b.createdAt)),
+  );
+
+  // 이전 포스팅과 다음 포스팅의 정보 계산
+  const allPostSlugs = sortedPosts.map(post => post._raw.flattenedPath);
+  const currentIndex = allPostSlugs.findIndex(slug => slug === params.slug);
+  const prevSlug =
+    currentIndex < allPostSlugs.length - 1
+      ? allPostSlugs[currentIndex + 1]
+      : null;
+  const prevTitle = prevSlug
+    ? allPosts.find(post => post._raw.flattenedPath === prevSlug)?.title ?? null
+    : null;
+
+  const nextSlug = currentIndex > 0 ? allPostSlugs[currentIndex - 1] : null;
+  const nextTitle = nextSlug
+    ? allPosts.find(post => post._raw.flattenedPath === nextSlug)?.title ?? null
+    : null;
 
   if (!post) {
     return <div>잘못된 페이지 경로입니다!!</div>;
@@ -46,6 +67,12 @@ function PostDetailPage({ params }: { params: { slug: string } }) {
         </div>
         <MDXContent />
       </article>
+      <PageMover
+        prevSlug={prevSlug}
+        nextSlug={nextSlug}
+        prevTitle={prevTitle}
+        nextTitle={nextTitle}
+      />
       <Comment />
       <Footer />
     </div>
