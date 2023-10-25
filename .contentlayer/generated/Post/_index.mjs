@@ -12,6 +12,7 @@ import computerArchitecture_1Md from './computer-architecture-1.md.json' assert 
 import computerNetworkApplicationLayerMd from './computer-network-application-layer.md.json' assert { type: 'json' }
 import dynamicProgrammingMd from './dynamic-programming.md.json' assert { type: 'json' }
 import http_1Md from './http-1.md.json' assert { type: 'json' }
+import http_2Md from './http-2.md.json' assert { type: 'json' }
 import jsAsyncDeferMd from './js-async-defer.md.json' assert { type: 'json' }
 import jsThisMd from './js-this.md.json' assert { type: 'json' }
 import jsVarMd from './js-var.md.json' assert { type: 'json' }
@@ -20,4 +21,4 @@ import sqlSelect_1Md from './sql-select-1.md.json' assert { type: 'json' }
 import sqlSelect_2Md from './sql-select-2.md.json' assert { type: 'json' }
 import sqlSelect_3Md from './sql-select-3.md.json' assert { type: 'json' }
 
-export const allPosts = [algorithmBacktrackingMd, algorithmBfsMd, algorithmBinarysearchMd, algorithmDfsMd, bj_15686Md, bj_1697Md, bjNmMd, browserRenderingMd, computerArchitecture_1Md, computerNetworkApplicationLayerMd, dynamicProgrammingMd, http_1Md, jsAsyncDeferMd, jsThisMd, jsVarMd, prefixSumMd, sqlSelect_1Md, sqlSelect_2Md, sqlSelect_3Md]
+export const allPosts = [algorithmBacktrackingMd, algorithmBfsMd, algorithmBinarysearchMd, algorithmDfsMd, bj_15686Md, bj_1697Md, bjNmMd, browserRenderingMd, computerArchitecture_1Md, computerNetworkApplicationLayerMd, dynamicProgrammingMd, http_1Md, http_2Md, jsAsyncDeferMd, jsThisMd, jsVarMd, prefixSumMd, sqlSelect_1Md, sqlSelect_2Md, sqlSelect_3Md]
