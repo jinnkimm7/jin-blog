@@ -53,7 +53,16 @@ function PostDetailPage({ params }: { params: { slug: string } }) {
   return (
     <div className="max-w-3xl mx-auto">
       <Navbar />
-      <article className="prose lg:prose-xl bg-white p-5 my-5 rounded-xl">
+      <article
+        className="
+          bg-white p-5 my-5 rounded-xl
+          prose lg:prose-xl md:prose-xl
+          prose-blockquote:bg-gray-100 prose-blockquote:rounded-xl prose-blockquote:not-italic
+          prose-a:text-blue-700 prose-a:no-underline hover:prose-a:underline
+          prose-img:rounded-xl
+          prose-em:text-red-500 prose-em:font-bold prose-em:bg-gray-100 prose-em:rounded-xl prose-em:p-1 prose-em:not-italic
+        "
+      >
         <h1>{post.title}</h1>
         <div className="flex justify-between items-center">
           <p>{format(parseISO(post.createdAt), "LLLL d, yyyy")}</p>
