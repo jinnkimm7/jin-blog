@@ -1,6 +1,6 @@
 ---
 title: '바닐라 JS로 SPA 만들기 - 컴포넌트'
-description: ''
+description: '바닐라 JS로 SPA를 만들기 위한 첫 번째 단계인 컴포넌트를 구현했습니다.'
 tags:
   - JavaScript
   - 바닐라JS
