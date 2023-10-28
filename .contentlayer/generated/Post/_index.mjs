@@ -21,5 +21,6 @@ import sqlSelect_1Md from './sql-select-1.md.json' assert { type: 'json' }
 import sqlSelect_2Md from './sql-select-2.md.json' assert { type: 'json' }
 import sqlSelect_3Md from './sql-select-3.md.json' assert { type: 'json' }
 import vanillaJsComponentMd from './vanilla-js-component.md.json' assert { type: 'json' }
+import vanillaJsStoreMd from './vanilla-js-store.md.json' assert { type: 'json' }
 
-export const allPosts = [algorithmBacktrackingMd, algorithmBfsMd, algorithmBinarysearchMd, algorithmDfsMd, bj_15686Md, bj_1697Md, bjNmMd, browserRenderingMd, computerArchitecture_1Md, computerNetworkApplicationLayerMd, dynamicProgrammingMd, http_1Md, http_2Md, jsAsyncDeferMd, jsThisMd, jsVarMd, prefixSumMd, sqlSelect_1Md, sqlSelect_2Md, sqlSelect_3Md, vanillaJsComponentMd]
+export const allPosts = [algorithmBacktrackingMd, algorithmBfsMd, algorithmBinarysearchMd, algorithmDfsMd, bj_15686Md, bj_1697Md, bjNmMd, browserRenderingMd, computerArchitecture_1Md, computerNetworkApplicationLayerMd, dynamicProgrammingMd, http_1Md, http_2Md, jsAsyncDeferMd, jsThisMd, jsVarMd, prefixSumMd, sqlSelect_1Md, sqlSelect_2Md, sqlSelect_3Md, vanillaJsComponentMd, vanillaJsStoreMd]
