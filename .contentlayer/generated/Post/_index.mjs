@@ -19,6 +19,7 @@ import jsAsyncDeferMd from './js-async-defer.md.json' assert { type: 'json' }
 import jsThisMd from './js-this.md.json' assert { type: 'json' }
 import jsVarMd from './js-var.md.json' assert { type: 'json' }
 import prefixSumMd from './prefix-sum.md.json' assert { type: 'json' }
+import sqlGroupByMd from './sql-group-by.md.json' assert { type: 'json' }
 import sqlSelect_1Md from './sql-select-1.md.json' assert { type: 'json' }
 import sqlSelect_2Md from './sql-select-2.md.json' assert { type: 'json' }
 import sqlSelect_3Md from './sql-select-3.md.json' assert { type: 'json' }
@@ -27,4 +28,4 @@ import vanillaJsComponentMd from './vanilla-js-component.md.json' assert { type:
 import vanillaJsRouterMd from './vanilla-js-router.md.json' assert { type: 'json' }
 import vanillaJsStoreMd from './vanilla-js-store.md.json' assert { type: 'json' }
 
-export const allPosts = [algorithmBacktrackingMd, algorithmBfsMd, algorithmBinarysearchMd, algorithmDfsMd, bj_15686Md, bj_1697Md, bjNmMd, browserRenderingMd, computerArchitecture_1Md, computerNetworkApplicationLayerMd, dynamicProgrammingMd, http_1Md, http_2Md, http_3Md, http_4Md, jsAsyncDeferMd, jsThisMd, jsVarMd, prefixSumMd, sqlSelect_1Md, sqlSelect_2Md, sqlSelect_3Md, sqlStringDateMd, vanillaJsComponentMd, vanillaJsRouterMd, vanillaJsStoreMd]
+export const allPosts = [algorithmBacktrackingMd, algorithmBfsMd, algorithmBinarysearchMd, algorithmDfsMd, bj_15686Md, bj_1697Md, bjNmMd, browserRenderingMd, computerArchitecture_1Md, computerNetworkApplicationLayerMd, dynamicProgrammingMd, http_1Md, http_2Md, http_3Md, http_4Md, jsAsyncDeferMd, jsThisMd, jsVarMd, prefixSumMd, sqlGroupByMd, sqlSelect_1Md, sqlSelect_2Md, sqlSelect_3Md, sqlStringDateMd, vanillaJsComponentMd, vanillaJsRouterMd, vanillaJsStoreMd]
