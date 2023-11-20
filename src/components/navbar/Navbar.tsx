@@ -4,7 +4,10 @@ import React from "react";
 function Navbar() {
   return (
     <nav className="mx-[auto]">
-      <Link href="/resume" className="text-lg font-bold animate-pulse">
+      <Link
+        href="https://jinnkimm7.notion.site/8e758e868dc64f80b3bf413bbe031b2b?pvs=4"
+        className="text-lg font-bold animate-pulse"
+      >
         ➡️ About Me 🙋‍♂️
       </Link>
       <Link href="/" className="text-4xl font-extrabold text-gray-900">
