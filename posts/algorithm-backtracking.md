@@ -7,7 +7,7 @@ tags:
 createdAt: '2023-09-25'
 ---
 
-백트래킹은 `완전탐색`을 목적으로 한 알고리즘입니다. 앞서 완전탐색을 하기 위한 알고리즘인 DFS, BFS를 공부했는데, 이 알고리즘들과 다른점은 `Back track`이라는 말처럼, 만약 해가 아닐 거 같으면 더 깊이 탐색하지 않고 이전 단계로 돌아나가서 해를 찾는 알고리즘입니다.
+백트래킹은 *완전탐색*을 목적으로 한 알고리즘입니다. 앞서 완전탐색을 하기 위한 알고리즘인 DFS, BFS를 공부했는데, 이 알고리즘들과 백트래킹 알고리즘의 다른점은 말 그대로 *Back track*이라는 말처럼, 만약 해가 아닐 거 같으면 더 깊이 탐색하지 않고 이전 단계로 돌아나가서(Back Tracking) 해를 찾는 알고리즘입니다.
 
 백트래킹의 일반적인 코드 형태는 다음과 같습니다.
 
@@ -29,7 +29,7 @@ function recursive() {
 
 ## 문제 적용하기
 
-[N과 M (1)](https://www.acmicpc.net/problem/15649)의 문제는 N과 M의 수를 입력받고, 1 ~ N까지의 숫자중 중복없이 M 길이의 수열을 모두 출력하는 문제입니다. 모든 조합의 수를 탐색하는 완전탐색이지만, 중복하지 않는 조건을 만족할 경우에만 완전탐색을 진행하기 때문에 전형적인 백트래킹 알고리즘으로 해결하면 되는 문제입니다. 
+[N과 M (1)](https://www.acmicpc.net/problem/15649)의 문제는 N과 M의 수를 입력받고, 1 ~ N까지의 숫자중 중복없이 M 길이의 수열을 모두 출력하는 문제입니다. 모든 조합의 수를 탐색하는 완전탐색이지만, 중복하지 않는 *조건을 만족할 경우에만 완전탐색을 진행*하기 때문에 전형적인 백트래킹 알고리즘으로 해결하면 되는 문제입니다. 
 
 ![N과 M 그래프](https://raw.githubusercontent.com/jinnkimm7/jin-blog/50beb8af2c3d3cedab327e69269f7b98b3fc3009/public/images/algorithm/backtracking/1.png)
 
@@ -71,6 +71,7 @@ console.log(answer);
 ![N퀸 그래프](https://raw.githubusercontent.com/jinnkimm7/jin-blog/50beb8af2c3d3cedab327e69269f7b98b3fc3009/public/images/algorithm/backtracking/2.png)
 
 1행부터 퀸을 하나씩 놓으면서 완전탐색을 한다고 가정하면, 2^24번 탐색하게 됩니다. 퀸이 한 행의 위치에 이미 존재한다고 가정하고, 이미 존재하는 퀸의 위치의 같은 행, 같은 열, 좌우 대각선에는 위치 할 수 없기 때문에, 백트래킹을 해 탐색 범위를 좁히는 식으로 문제를 풀 수 있습니다. 트리 구조를 이용하면 더 이해하기가 쉽습니다.  
+
 ```js
 const fs = require('fs');
 const input = fs.readFileSync('/dev/stdin').toString().split('\n');
